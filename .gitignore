@@ -1,0 +1,5 @@
+*.json
+!docs/manifest.webmanifest
+private/
+source/
+outputs/

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru" class="access-locked">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#17181b">
+  <meta name="color-scheme" content="dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Шумер">
+  <meta name="description" content="Личное пространство для изучения четырёх лекций о Шумере: записи, карта, хронология, вопросы и заметки.">
+  <title>Шумер · четыре лекции</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./boot.css">
+  <script src="./videos.js" defer></script>
+  <script src="./boot.js" defer></script>
+  <script src="./offline.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="app-header">
+    <a class="brand" href="#course" aria-label="Шумер: к четырём лекциям">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 11h28l-7 6H15zM12 23h28l-7 6H19zM8 35h24l-7 6H15zM22 7l6 5v25l-6-5z"/></svg>
+      <span><strong>Шумер</strong><small>Четыре лекции · личное изучение</small></span>
+    </a>
+    <span class="local-badge"><span aria-hidden="true"></span>Заметки на этом устройстве</span>
+  </header>
+  <nav class="main-nav" aria-label="Основные разделы">
+    <a href="#course" data-nav="course"><span aria-hidden="true">▤</span>Курс</a>
+    <a href="#world" data-nav="world"><span aria-hidden="true">⌖</span>Мир Шумера</a>
+    <a href="#recall" data-nav="recall"><span aria-hidden="true">◇</span>Вспомнить</a>
+    <a href="#notes" data-nav="notes"><span aria-hidden="true">✎</span>Заметки</a>
+  </nav>
+  <main id="main" tabindex="-1"></main>
+  <footer class="app-footer"><p id="offline-status" role="status">Подготавливаю приложение для работы без интернета…</p><p>Ваши отметки и заметки сохраняются в этом браузере. Резервную копию можно выгрузить в разделе «Заметки».</p></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="noscript">Для карточек, видео и сохранения заметок включите JavaScript в браузере.</p></noscript>
+</body>
+</html>

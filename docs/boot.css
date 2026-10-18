@@ -1,0 +1,28 @@
+/* The public shell contains no personal course data. */
+html.access-locked body > :not(#access-root):not(noscript){display:none!important}
+.access-screen{min-height:100vh;min-height:100svh;display:grid;place-items:center;padding:max(1.2rem,env(safe-area-inset-top)) max(1rem,env(safe-area-inset-right)) max(1.2rem,env(safe-area-inset-bottom)) max(1rem,env(safe-area-inset-left));background:radial-gradient(ellipse at 50% 8%,#342b23 0,transparent 63%),#17181b;color:#f0ede6}
+.access-screen[hidden]{display:none!important}
+.access-card{width:100%;max-width:31rem;padding:clamp(1.15rem,4.5vw,2.6rem);border:1px solid #5c4938;border-radius:26px;background:linear-gradient(150deg,#2a2723eb,#202124f5 62%);box-shadow:0 24px 80px #0003}
+.access-mark{width:64px;height:64px;display:grid;place-items:center;margin-bottom:1.45rem;border:1px solid #70553c;border-radius:17px;background:#3b3025;color:#e4bc82}
+.access-mark svg{width:43px;height:43px;fill:currentColor}
+.access-eyebrow{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#e4bc82;font-weight:600;line-height:1.6}
+.access-card h1{margin:.3rem 0 0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(3.3rem,12vw,4.7rem);line-height:1.12;letter-spacing:-.035em;font-weight:500}
+.access-subtitle{margin:.6rem 0 0!important;font-size:1rem;line-height:1.6;color:#c8bfb1}
+.access-divider{height:1px;background:linear-gradient(90deg,#765c40,transparent);margin:1.6rem 0 1.45rem}
+.access-card h2{font-size:1.3rem;font-weight:600;line-height:1.35;letter-spacing:-.02em;margin:0 0 .7rem}
+.access-description{font-size:.95rem;line-height:1.65;color:#d0ccc5;margin:0!important}
+.access-file-input{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.access-button{display:flex;align-items:center;justify-content:center;gap:.75rem;width:100%;min-height:56px;margin-top:1.25rem;padding:.75rem 1rem;border:1px solid #e4bc82;border-radius:13px;background:#e4bc82;color:#2b2118;font:inherit;font-size:.92rem;font-weight:650;line-height:1.4;text-align:center;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.access-button span{font-size:1.15rem;line-height:1}
+.access-button:hover{background:#f1ca94;border-color:#f1ca94}
+.access-button:focus-visible{outline:3px solid #f6dfbb;outline-offset:5px}
+.access-button:disabled{opacity:.65;cursor:wait}
+.access-status{min-height:0;margin:.75rem 0 0!important;font-size:.87rem;line-height:1.6;color:#c4d4c5;overflow-wrap:anywhere}
+.access-status:empty{display:none}
+.access-status.access-error{color:#f4b4a2}
+.access-note{margin:1.1rem 0 0!important;font-size:.8rem;line-height:1.65;color:#bdb7ad}
+.access-device-note{margin:.6rem 0 0!important;font-size:.8rem;line-height:1.65;color:#bdb7ad}
+.access-storage-warning{max-width:59rem;margin:1rem auto;padding:1rem 1.2rem;background:#352b21;border:1px solid #876b46;border-radius:14px;color:#efe0c7;font-size:.85rem;line-height:1.6}
+.access-button-secondary{width:auto;min-height:48px;font-size:.85rem;margin-top:.7rem;padding:.5rem .9rem}
+@media(max-width:380px){.access-card{border-radius:20px;padding:1.1rem}.access-mark{width:56px;height:56px;margin-bottom:1.1rem}.access-divider{margin:1.2rem 0}.access-card h2{font-size:1.15rem}.access-button{font-size:.85rem;padding:.7rem .6rem}.access-storage-warning{margin:.8rem}}
+@media(prefers-reduced-motion:reduce){.access-screen{scroll-behavior:auto}}

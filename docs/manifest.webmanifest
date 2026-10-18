@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Шумер · четыре лекции",
+  "short_name": "Шумер",
+  "description": "Личное пространство для изучения древней Месопотамии",
+  "lang": "ru",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#17181b",
+  "theme_color": "#17181b",
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

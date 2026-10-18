@@ -1,0 +1,6 @@
+const CACHE='sumer-study-3589698a734960';
+const ASSETS=["./","./index.html","./style.css","./app.js","./boot.js","./boot.css","./offline.js","./videos.js","./icon.svg","./icon-192.png","./icon-512.png","./manifest.webmanifest"];
+self.addEventListener('install',event=>event.waitUntil((async()=>{const cache=await caches.open(CACHE);await cache.addAll(ASSETS);await self.skipWaiting();})()));
+self.addEventListener('activate',event=>event.waitUntil((async()=>{for(const key of await caches.keys()) if(key.startsWith('sumer-study-')&&key!==CACHE)await caches.delete(key);await self.clients.claim();})()));
+self.addEventListener('message',event=>{if(event.data?.type==='SUMER_CHECK_OFFLINE') event.waitUntil((async()=>{const cache=await caches.open(CACHE);const items=await Promise.all(ASSETS.map(x=>cache.match(x)));if(items.every(Boolean))event.source?.postMessage({type:'SUMER_OFFLINE_READY'});})());});
+self.addEventListener('fetch',event=>{if(event.request.method!=='GET'||new URL(event.request.url).origin!==self.location.origin)return;event.respondWith((async()=>{const cache=await caches.open(CACHE);const found=await cache.match(event.request,{ignoreSearch:true});if(found)return found;try{return await fetch(event.request);}catch(error){if(event.request.mode==='navigate')return await cache.match('./');throw error;}})());});
